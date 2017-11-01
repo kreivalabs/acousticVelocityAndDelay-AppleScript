@@ -1,3 +1,5 @@
+#version 1.1 / 31-October-2017
+
 #A utility to calculate approximate acoustic velocity in air based on measured temperature in
 #degrees Fahrenheit, as well as approximate speaker delay timings in milliseconds based on the
 #measured distance between loudspeaker systems.
