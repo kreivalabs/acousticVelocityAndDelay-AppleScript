@@ -1,4 +1,4 @@
-#version 1.1 / 31-October-2017
+#version 1.2 / 08-November-2017
 
 #A utility to calculate approximate acoustic velocity in air based on measured temperature in
 #degrees Fahrenheit, as well as approximate speaker delay timings in milliseconds based on the
@@ -24,8 +24,8 @@ on error errmsg number errnbr
 end try
 
 ignoring numeric strings
-	set myCelcius to (myTemp - 32) / 1.8 as number
-	set metersSeconds to (0.6 * myCelcius) + 331.4 as number
+	set myCelcius to (myTemp - 32) * 5/9 as number
+	set metersSeconds to (0.606 * myCelcius) + 331.3 as number
 	set feetMiliseconds to metersSeconds * 0.00328084 as number
 	set delayTime to myDistance / feetMiliseconds as number
 	
